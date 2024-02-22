@@ -1,1 +1,1 @@
-# Create-components-fast
+# create-component-fast
