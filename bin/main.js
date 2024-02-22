@@ -12,22 +12,16 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-const blueColor = "\x1b[34m";
-const resetColor = "\x1b[0m";
-
 let componentName = process.argv[2];
 let componentWithStyles = process.argv[3];
 let styleExtension = process.argv[4];
 let extension = process.argv[5];
 
 if (!componentName) {
-  rl.question(
-    `${blueColor}\nPlease provide a component name: ${resetColor}`,
-    (answer) => {
-      componentName = answer.trim();
-      askForStyles();
-    }
-  );
+  rl.question(`\nPlease provide a component name:`, (answer) => {
+    componentName = answer.trim();
+    askForStyles();
+  });
 } else {
   askForStyles();
 }
@@ -39,7 +33,7 @@ function askForStyles() {
         {
           type: "list",
           name: "styles",
-          message: `${blueColor}Do you want to create a style file?\n`,
+          message: `Do you want to create a style file?\n`,
           choices: ["y", "n"],
         },
       ])
@@ -63,7 +57,7 @@ function askForStyleExtension() {
         {
           type: "list",
           name: "extension",
-          message: `${blueColor}Choose the extension of the style file\n`,
+          message: `Choose the extension of the style file\n`,
           choices: ["css", "scss"],
         },
       ])
@@ -86,12 +80,13 @@ function askForExtension() {
         {
           type: "list",
           name: "extension",
-          message: "Choose the extension of the component file\n",
-          choices: ["jsx", "tsx"],
+          message: `Choose the extension of the component file\n`,
+          choices: ["jsx", `tsx`],
         },
       ])
       .then((answers) => {
         extension = answers.extension;
+        console.log(extension);
         createComponent(componentName, componentWithStyles, extension);
       })
       .catch((error) => {

@@ -6,7 +6,7 @@ This tool can create react component with your terminal in few seconds.
 
 ## Install
 
-To install `create-component-fast`, run the following command in your terminal:
+To install `create-component-fast` globbaly, run the following command in your terminal:
 
 ```sh
 $ npm install -g create-component-fast
@@ -27,6 +27,7 @@ $ CCF
 
   - Name of the component
   - With a style associate or not
+  - Extension of the style
   - Extension of the component
 
 ### Create your components with your choices
