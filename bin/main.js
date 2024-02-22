@@ -17,7 +17,8 @@ const resetColor = "\x1b[0m";
 
 let componentName = process.argv[2];
 let componentWithStyles = process.argv[3];
-let extension = process.argv[4];
+let styleExtension = process.argv[4];
+let extension = process.argv[5];
 
 if (!componentName) {
   rl.question(
@@ -33,13 +34,46 @@ if (!componentName) {
 
 function askForStyles() {
   if (!componentWithStyles) {
-    rl.question(
-      `${blueColor}\nDo you want to create a component with styles? (y/n): ${resetColor}`,
-      (answer) => {
-        componentWithStyles = answer.trim();
+    inquirer
+      .prompt([
+        {
+          type: "list",
+          name: "styles",
+          message: `${blueColor}Do you want to create a style file?\n`,
+          choices: ["y", "n"],
+        },
+      ])
+      .then((answers) => {
+        componentWithStyles = answers.styles;
+        if (componentWithStyles === "y") askForStyleExtension();
+        else askForExtension();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  } else {
+    askForStyleExtension();
+  }
+}
+
+function askForStyleExtension() {
+  if (!styleExtension) {
+    inquirer
+      .prompt([
+        {
+          type: "list",
+          name: "extension",
+          message: `${blueColor}Choose the extension of the style file\n`,
+          choices: ["css", "scss"],
+        },
+      ])
+      .then((answers) => {
+        styleExtension = answers.extension;
         askForExtension();
-      }
-    );
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   } else {
     askForExtension();
   }
@@ -52,7 +86,7 @@ function askForExtension() {
         {
           type: "list",
           name: "extension",
-          message: "Choose the extension of the component file",
+          message: "Choose the extension of the component file\n",
           choices: ["jsx", "tsx"],
         },
       ])
@@ -79,10 +113,14 @@ function createComponent(componentName, componentWithStyles, extension) {
   fs.mkdirSync(componentDir, { recursive: true });
 
   let componentContent = "";
+  let styleImport = "";
+
+  if (componentWithStyles === "y") {
+    styleImport = `import styles from "./style.module.${styleExtension}";\n\n`;
+  }
 
   if (extension === "jsx") {
-    componentContent = `
-export function ${componentName}(){
+    componentContent = `${styleImport}export function ${componentName}({props}){
   return (
     <div${
       componentWithStyles === "y"
@@ -94,29 +132,28 @@ export function ${componentName}(){
   );
 }`;
   } else if (extension === "tsx") {
-    componentContent = `
-import React from 'react';
-import styles from './style.module.css'; // Importation du module de style
-
-interface Props {
-  // Définir les types des props si nécessaire
-}
-
-const ${componentName}: React.FC<Props> = () => {
+    componentContent = `${styleImport}
+    type Props = {
+      // your props here
+    }
+    
+    export function ${componentName}({}: Props){
   return (
-    <div className={styles.container}>
+    <div${
+      componentWithStyles === "y"
+        ? " className={styles." + componentName + "}"
+        : ""
+    }>
       {/* your code here */}
     </div>
   );
-};
-
-export default ${componentName};`;
+};`;
   }
 
   fs.writeFileSync(componentFile, componentContent);
 
   if (componentWithStyles === "y") {
-    const styleFile = path.join(componentDir, `style.module.css`);
+    const styleFile = path.join(componentDir, `style.module.${styleExtension}`);
 
     fs.writeFileSync(
       styleFile,
