@@ -17,20 +17,34 @@ $ npm install -g create-component-fast
 
 Just run the following command
 
-````sh
+```sh
 
 $ CCF
 
 ```
-````
+
+- That will ask you differents options
+
+  - Name of the component
+  - With a style associate or not
+  - Extension of the component
 
 ### Create your components with your choices
 
 - You can create different type of components:
-  jsx component
-  tsx component
+
+  - jsx component
+  - tsx component
 
 - You can chose a style file associate
 
-  css file
-  scss file
+  - css file
+  - scss file
+
+Currently supported options are:
+
+| Option  | Description                              |
+| ------- | ---------------------------------------- |
+| `Name`  | Name of the component                    |
+| `Style` | Set a style associate with the component |
+| `Type`  | Set the extension of the component       |
