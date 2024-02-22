@@ -1,6 +1,6 @@
 {
   "name": "create-component-fast",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create react components really fast",
   "bin": {
     "CCF": "./bin/main.js"
@@ -22,7 +22,7 @@
   ],
   "author": "Milan TURCANO",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "inquirer": "^9.2.15"
   }
 }
