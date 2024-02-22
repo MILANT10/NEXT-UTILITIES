@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Create react components really fast",
   "bin": {
-    "CCF": "main.js"
+    "CCF": "./bin/main.js"
   },
-  "main": "main.js",
+  "main": "./bin/main.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
