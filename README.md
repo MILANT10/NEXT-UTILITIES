@@ -43,8 +43,9 @@ $ CCF
 
 Currently supported options are:
 
-| Option  | Description                              |
-| ------- | ---------------------------------------- |
-| `Name`  | Name of the component                    |
-| `Style` | Set a style associate with the component |
-| `Type`  | Set the extension of the component       |
+| Option       | Description                                                                   |
+| ------------ | ----------------------------------------------------------------------------- |
+| `Name`       | Name of the component                                                         |
+| `Style`      | Set a style associate with the component ['y'], ['n']                         |
+| `Style type` | Set the extension fo the style associate with the component ['css'], ['scss'] |
+| `Type`       | Set the extension of the component ["jsx"], ["tsx"]                           |

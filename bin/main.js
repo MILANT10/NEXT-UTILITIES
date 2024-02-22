@@ -116,11 +116,12 @@ function createComponent(componentName, componentWithStyles, extension) {
   let styleImport = "";
 
   if (componentWithStyles === "y") {
-    styleImport = `import styles from "./style.module.${styleExtension}";\n\n`;
+    styleImport = `import styles from "./style.module.${styleExtension}";\n`;
   }
 
   if (extension === "jsx") {
-    componentContent = `${styleImport}export function ${componentName}({props}){
+    componentContent = `${styleImport}
+export function ${componentName}({props}){
   return (
     <div${
       componentWithStyles === "y"
@@ -133,11 +134,11 @@ function createComponent(componentName, componentWithStyles, extension) {
 }`;
   } else if (extension === "tsx") {
     componentContent = `${styleImport}
-    type Props = {
-      // your props here
-    }
-    
-    export function ${componentName}({}: Props){
+type Props = {
+  // your props here
+}
+
+export function ${componentName}({}: Props){
   return (
     <div${
       componentWithStyles === "y"
