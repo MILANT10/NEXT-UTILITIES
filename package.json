@@ -1,0 +1,28 @@
+{
+  "name": "create-component-fast",
+  "version": "1.0.0",
+  "description": "Create react components really fast",
+  "bin": {
+    "CCF": "main.js"
+  },
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MILANT10/create-component-fast"
+  },
+  "keywords": [
+    "Create react components",
+    "Create react components fast",
+    "Create react components really fast",
+    "Create react components really fast and easy"
+  ],
+  "author": "Milan TURCANO",
+  "license": "MIT",
+  "devDependencies": {
+    "inquirer": "^9.2.15"
+  }
+}
