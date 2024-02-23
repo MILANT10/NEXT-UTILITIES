@@ -18,8 +18,14 @@ $ npm install -g create-component-fast
 Just run the following command
 
 ```sh
-
 $ CCF
+
+```
+
+Or
+
+```sh
+$ ccf
 
 ```
 
@@ -50,3 +56,9 @@ Currently supported options are:
 | `Style`      | Set a style associate with the component `y , n`                           |
 | `Style type` | Set the extension fo the style associate with the component `"css","scss"` |
 | `Type`       | Set the extension of the component `"jsx", "tsx"`                          |
+
+#### Example
+
+```sh
+$ CCF MySuperComponent y css jsx
+```

@@ -1,9 +1,10 @@
 {
   "name": "create-component-fast",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Create react components really fast",
   "bin": {
-    "CCF": "./bin/main.js"
+    "CCF": "./bin/main.js",
+    "ccf": "./bin/main.js"
   },
   "main": "./bin/main.js",
   "type": "module",
