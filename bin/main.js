@@ -129,11 +129,11 @@ export function ${componentName}({props}){
 }`;
   } else if (extension === "tsx") {
     componentContent = `${styleImport}
-type Props = {
+type ${componentName}Props = {
   // your props here
 }
 
-export function ${componentName}({}: Props){
+export function ${componentName}({}: ${componentName}Props){
   return (
     <div${
       componentWithStyles === "y"
