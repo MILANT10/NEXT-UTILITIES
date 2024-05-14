@@ -143,7 +143,7 @@ export function ${componentName}({}: ${componentName}Props){
       {/* your code here */}
     </div>
   );
-};`;
+}`;
   }
 
   fs.writeFileSync(componentFile, componentContent);
