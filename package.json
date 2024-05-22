@@ -3,10 +3,10 @@
   "version": "1.0.18",
   "description": "Create react components and next pages really fast",
   "bin": {
-    "CCF": "./bin/main.js",
-    "ccf": "./bin/main.js",
-    "CPF": "./bin/nextpage.js",
-    "cpf": "./bin/nextpage.js"
+    "CCF": "bin/main.js",
+    "ccf": "bin/main.js",
+    "CPF": "bin/nextpage.js",
+    "cpf": "bin/nextpage.js"
   },
   "main": "./bin/main.js",
   "type": "module",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MILANT10/create-component-fast"
+    "url": "git+https://github.com/MILANT10/create-component-fast.git"
   },
   "keywords": [
     "Create react components",
