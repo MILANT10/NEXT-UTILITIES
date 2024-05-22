@@ -1,6 +1,6 @@
 {
   "name": "create-component-fast",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Create react components and next pages really fast",
   "bin": {
     "CCF": "bin/main.js",
