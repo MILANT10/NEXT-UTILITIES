@@ -13,7 +13,9 @@ $ npm install -g create-component-fast
 
 ```
 
-### How it's work ?
+## How it's work ?
+
+### For creating components
 
 Just run the following command
 
@@ -26,6 +28,22 @@ Or
 
 ```sh
 $ ccf
+
+```
+
+### For creating Pages
+
+Just run the following command
+
+```sh
+$ CPF
+
+```
+
+Or
+
+```sh
+$ cpf
 
 ```
 
