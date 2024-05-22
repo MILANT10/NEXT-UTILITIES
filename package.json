@@ -1,10 +1,12 @@
 {
   "name": "create-component-fast",
-  "version": "1.0.17",
-  "description": "Create react components really fast",
+  "version": "1.0.18",
+  "description": "Create react components and next pages really fast",
   "bin": {
     "CCF": "./bin/main.js",
-    "ccf": "./bin/main.js"
+    "ccf": "./bin/main.js",
+    "CPF": "./bin/nextpage.js",
+    "cpf": "./bin/nextpage.js"
   },
   "main": "./bin/main.js",
   "type": "module",

@@ -116,7 +116,7 @@ function createComponent(componentName, componentWithStyles, extension) {
 
   if (extension === "jsx") {
     componentContent = `${styleImport}
-export function ${componentName}({props}){
+export default function ${componentName}({props}){
   return (
     <div${
       componentWithStyles === "y"
@@ -133,7 +133,7 @@ type ${componentName}Props = {
   // your props here
 }
 
-export function ${componentName}({}: ${componentName}Props){
+export default function ${componentName}({}: ${componentName}Props){
   return (
     <div${
       componentWithStyles === "y"
