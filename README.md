@@ -9,7 +9,7 @@ This set of tools allow you to start a clean next project, creating pages and co
 To install `Next utilities` globbaly, run the following command in your terminal:
 
 ```sh
-$ npm install -g Next utilities
+$ npm install -g next-utilities
 
 ```
 
