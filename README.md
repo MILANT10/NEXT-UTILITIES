@@ -1,82 +1,65 @@
-# Create-component-fast
+# Next utilities
 
-**Are you tired of creating your react component manually or your next pages ? Me too ! Here is the simple way to create your components in few seconds**
+**A set of tools for creating next web app more easier and faster**
 
-This tool can create react component or Next pages with your terminal in few seconds.
+This set of tools allow you to start a clean next project, creating pages and components for your next project.
 
 ## Install
 
-To install `create-component-fast` globbaly, run the following command in your terminal:
+To install `Next utilities` globbaly, run the following command in your terminal:
 
 ```sh
-$ npm install -g create-component-fast
+$ npm install -g Next utilities
 
 ```
 
 ## How it's work ?
+
+## To start a new projects
+
+Run the following command
+
+```sh
+$ start-next
+
+```
+
+this command will create a new project inside your terminal path.
+
+This project is clean so you can start coding
 
 ### For creating components
 
 Just run the following command
 
 ```sh
-$ CCF
+$ CC
 
 ```
 
 Or
 
 ```sh
-$ ccf
+$ cc
 
 ```
+
+This command will create a components inside the component folder.
 
 ### For creating Pages
 
 Just run the following command
 
 ```sh
-$ CPF
+$ CP
 
 ```
 
 Or
 
 ```sh
-$ cpf
+$ cp
 
 ```
 
-- That will ask you differents options
-
-  - Name of the component
-  - With a style associate or not
-  - Extension of the style
-  - Extension of the component
-
-### Create your components with your choices
-
-- You can create different type of components:
-
-  - jsx component
-  - tsx component
-
-- You can chose a style file associate
-
-  - css file
-  - scss file
-
-Currently supported options are:
-
-| Option       | Description                                                                |
-| ------------ | -------------------------------------------------------------------------- |
-| `Name`       | Name of the component                                                      |
-| `Style`      | Set a style associate with the component `y , n`                           |
-| `Style type` | Set the extension fo the style associate with the component `"css","scss"` |
-| `Type`       | Set the extension of the component `"jsx", "tsx"`                          |
-
-#### Example
-
-```sh
-$ CCF MySuperComponent y css jsx
-```
+This command will create a page inside the app folder with a page.tsx inside.

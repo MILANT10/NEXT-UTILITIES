@@ -1,12 +1,13 @@
 {
-  "name": "create-component-fast",
-  "version": "1.0.20",
+  "name": "next-utilities",
+  "version": "2.0",
   "description": "Create react components and next pages really fast",
   "bin": {
-    "CCF": "bin/main.js",
-    "ccf": "bin/main.js",
-    "CPF": "bin/nextpage.js",
-    "cpf": "bin/nextpage.js"
+    "start-next": "bin/nextproject.js",
+    "CC": "bin/main.js",
+    "cc": "bin/main.js",
+    "CP": "bin/nextpage.js",
+    "cp": "bin/nextpage.js"
   },
   "main": "./bin/main.js",
   "type": "module",
@@ -15,13 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MILANT10/create-component-fast.git"
+    "url": "git+https://github.com/MILANT10/Next-utilities.git"
   },
   "keywords": [
-    "Create react components",
-    "Create react components fast",
-    "Create react components really fast",
-    "Create react components really fast and easy"
+    "Next-utilities"
   ],
   "author": "Milan TURCANO",
   "license": "MIT",
