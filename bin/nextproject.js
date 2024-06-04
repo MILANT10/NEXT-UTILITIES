@@ -90,6 +90,8 @@ function createProject() {
         );
       });
 
+      fs.rmdirSync(`${projectPath}/.git`, { recursive: true });
+
       return;
     }
 
