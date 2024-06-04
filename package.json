@@ -1,6 +1,6 @@
 {
   "name": "next-utilities",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create react components and next pages really fast",
   "bin": {
     "start-next": "bin/nextproject.js",

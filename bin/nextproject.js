@@ -39,7 +39,7 @@ function createProject() {
   console.log(`Project ${projectName} created successfully at ${projectPath}.`);
 
   // Execute a command after project creation
-  const command = `cd ^${projectPath} && git clone https://github.com/MILANT10/NEXT-TEMPLATE . && npm i`;
+  const command = `cd ^${projectPath} && git clone https://github.com/MILANT10/NEXT-TEMPLATE . && npm i && git remote remove origin`;
 
   exec(command, (error, stdout, stderr) => {
     if (error) {
@@ -89,8 +89,6 @@ function createProject() {
           }
         );
       });
-
-      fs.rm(`${projectPath}/.git`, { recursive: true });
 
       return;
     }
