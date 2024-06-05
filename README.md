@@ -63,3 +63,14 @@ $ cp
 ```
 
 This command will create a page inside the app folder with a page.tsx inside.
+
+### Want to start your app ?
+
+Just run the following command
+
+```sh
+$ n command (dev, build, start, lint)
+
+```
+
+This command will run the original command npm run command.
