@@ -1,13 +1,13 @@
 {
   "name": "next-utilities",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "Create react components and next pages really fast",
   "bin": {
     "start-next": "bin/nextproject.js",
-    "CC": "bin/main.js",
-    "cc": "bin/main.js",
-    "CP": "bin/nextpage.js",
-    "cp": "bin/nextpage.js",
+    "CNC": "bin/main.js",
+    "cnc": "bin/main.js",
+    "CNP": "bin/nextpage.js",
+    "cnp": "bin/nextpage.js",
     "n": "bin/command.js"
   },
   "main": "./bin/main.js",

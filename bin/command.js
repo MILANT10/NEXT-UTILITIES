@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 });
 
 let command = process.argv[2];
-let mode = "";
+let mode = command;
 
 if (!command) {
   rl.question(
@@ -19,19 +19,19 @@ if (!command) {
       switch (command) {
         case "dev":
           mode = "dev";
-          startProcess();
+          startProcess(mode);
           break;
         case "build":
           mode = "build";
-          startProcess();
+          startProcess(mode);
           break;
         case "start":
           mode = "start";
-          startProcess();
+          startProcess(mode);
           break;
         case "lint":
           mode = "lint";
-          startProcess();
+          startProcess(mode);
           break;
         default:
           console.error(`Unknown command: ${command}`);
@@ -40,10 +40,10 @@ if (!command) {
     }
   );
 } else {
-  startProcess();
+  startProcess(mode);
 }
 
-function startProcess() {
+function startProcess(mode) {
   const child = spawn("npm", ["run", mode], {
     shell: true,
     stdio: "inherit",

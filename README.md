@@ -33,14 +33,14 @@ This project is clean so you can start coding
 Just run the following command
 
 ```sh
-$ CC
+$ CNC
 
 ```
 
 Or
 
 ```sh
-$ cc
+$ cnc
 
 ```
 
@@ -51,14 +51,14 @@ This command will create a components inside the component folder.
 Just run the following command
 
 ```sh
-$ CP
+$ CNP
 
 ```
 
 Or
 
 ```sh
-$ cp
+$ cnp
 
 ```
 
