@@ -1,6 +1,6 @@
 {
   "name": "next-utilities",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Create react components and next pages really fast",
   "bin": {
     "start-next": "bin/nextproject.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MILANT10/Next-utilities.git"
+    "url": "git+https://github.com/ProMilanT10/NEXT-UTILITIES"
   },
   "keywords": [
     "Next-utilities"
